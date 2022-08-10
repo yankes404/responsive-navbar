@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+:root {
+    --color: #ff6600;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1e1e23;
+    color: #fff;
+    font-size: 24px;
+    margin: 15px;
+}
+
+.navbar-label {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.navbar-label:hover {
+    color: var(--color);
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked~.navbar {
+    transform: translateX(0)
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar {
+    background: #19191e;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+    transform: translateX(-100%)
+}
+
+.navbar label {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.navbar label i {
+    font-size: 24px
+}
+
+.navbar header {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #aaa;
+    padding: 10px 20px;
+    color: var(--color);
+}
+
+.navbar section {
+    padding: 10px 0 10px 20px;
+    border-bottom: 1px solid #28282a;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.navbar section:hover {
+    background: #131316;
+}
+
+.navbar section>a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    transition: all .3s ease-in-out;
+}
+
+.navbar section>a:hover {
+    color: var(--color);
+}
+
+.navbar i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.navbar .socials {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    gap: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .socials i {
+    font-size: 22px;
+    transition: all .3s ease-in-out;
+}
+
+.navbar #facebook:hover {
+    color: #4267B2;
+}
+
+.navbar #instagram:hover {
+    color: #C13584;
+}
+
+.navbar #discord:hover {
+    color: #7289da;
+}
+
+@media (max-width: 1000px) {
+    .navbar {
+        width: 100vw;
+    }
+    .navbar section {
+        text-align: center;
+    }
+}
